@@ -1,5 +1,7 @@
 /* === LUXURY YOGA BRAND CSS === */
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital@0;1&display=swap');
+/* Fonts & Base */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 * {
     margin: 0;
@@ -13,382 +15,587 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #f8f5f0;
-    color: #2b2b2b;
+    background-color: #FCF9F5; /* Soft warm cream */
+    color: #2C2418; /* Rich dark brown/charcoal */
     line-height: 1.7;
+    overflow-x: hidden;
 }
 
-/* Navigation */
+/* Typography */
+h1, h2, h3, .logo, .nav-links a {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+h1 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #2C2418;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* Navigation - Glassmorphism Premium */
 nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(10px);
+    background: rgba(252, 249, 245, 0.92);
+    backdrop-filter: blur(12px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 1.2rem 6%;
     z-index: 1000;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(176, 137, 104, 0.15);
 }
 
 .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #B08968;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #2C2418;
+    font-weight: 500;
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 2.5rem;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #2b2b2b;
+    color: #2C2418;
+    font-size: 1.1rem;
     font-weight: 500;
     transition: color 0.3s ease;
+    position: relative;
 }
 
 .nav-links a:hover {
     color: #B08968;
 }
 
-/* Hero Section */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #B08968;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section - Grand & Luxurious */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.45)),
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.45)),
         url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=2000&q=90");
     background-size: cover;
-    background-position: center;
+    background-position: center 30%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 120px 20px;
+    padding: 0 1rem;
+    position: relative;
 }
 
 .hero-content {
     max-width: 900px;
+    animation: fadeUp 1s ease-out;
 }
 
 .hero h1 {
     color: white;
-    font-size: 5rem;
-    font-family: 'Cormorant Garamond', serif;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-size: 5.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.2);
 }
 
-.hero-description {
-    color: white;
+.hero-tag {
+    color: rgba(255,255,255,0.9);
     font-size: 1.3rem;
-    margin-bottom: 35px;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
-@media (max-width: 768px) {
-    .hero-description {
-        font-size: 1.1rem;
-    }
-    
-    .hero-line-break {
-        display: block;
-    }
+.hero p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Buttons */
+/* Buttons - Premium Gold/Cream */
 .btn {
     display: inline-block;
-    padding: 18px 42px;
+    padding: 1rem 2.5rem;
     background: #B08968;
     color: white;
     text-decoration: none;
     border-radius: 50px;
-    transition: all 0.3s ease;
     font-weight: 600;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.btn:hover {
+.btn-primary {
+    background: #B08968;
+}
+
+.btn-primary:hover {
     background: #9A7659;
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    box-shadow: 0 15px 25px -10px rgba(176, 137, 104, 0.4);
 }
 
-/* Sections */
-.section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 100px 30px;
+.btn-outline {
+    background: transparent;
+    border: 1.5px solid white;
+    margin-left: 1rem;
 }
 
-.section h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 40px;
-    font-family: 'Cormorant Garamond', serif;
+.btn-outline:hover {
+    background: white;
     color: #2C2418;
+    border-color: white;
+    transform: translateY(-3px);
 }
 
-.section p {
-    max-width: 850px;
-    margin: 0 auto 20px;
+/* Sections Layout */
+.section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.section-alt {
+    background-color: #F5EFE6;
+}
+
+.section-title {
     text-align: center;
-    color: #5a4a3a;
+    margin-bottom: 3rem;
 }
 
-/* Cards */
-.cards {
+.section-title h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-title .subtitle {
+    color: #7A6A5A;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Cards - Premium & Spacious */
+.cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .card {
     background: white;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    padding: 2.5rem;
+    border-radius: 24px;
     text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(176, 137, 104, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(176, 137, 104, 0.15);
+    transform: translateY(-10px);
+    border-color: #B08968;
+    box-shadow: 0 25px 40px -15px rgba(176, 137, 104, 0.2);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
 }
 
 .card h3 {
-    margin-bottom: 12px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.7rem;
-    color: #B08968;
-}
-
-/* CTA Section - GRAND & VISIBLE */
-.cta {
-    background: linear-gradient(135deg, #B08968, #8B5E3C);
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-}
-
-.cta-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.cta-badge {
-    display: inline-block;
-    background: rgba(255,255,255,0.2);
-    color: white;
-    padding: 6px 20px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-.cta h2 {
-    color: white;
-    margin-bottom: 15px;
-    font-size: 3.5rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-}
-
-.cta-container p {
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 1.2rem;
-    margin-bottom: 35px;
-    font-family: 'Inter', sans-serif;
-}
-
-.btn-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 18px 45px;
-    background: white;
-    color: #B08968;
-    text-decoration: none;
-    border-radius: 60px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border: none;
-    cursor: pointer;
-}
-
-.btn-cta span {
-    display: inline-block;
-}
-
-.btn-arrow {
-    font-size: 1.4rem;
-    transition: transform 0.3s ease;
-}
-
-.btn-cta:hover {
-    background: #2C2418;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-}
-
-.btn-cta:hover .btn-arrow {
-    transform: translateX(5px);
-}
-
-/* Contact Section - CLICKABLE CARDS */
-.contact-section {
-    background: #F5EFE6;
-    margin-top: 0;
-}
-
-.contact-section h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 50px;
-    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
     color: #2C2418;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.contact-card {
-    background: white;
-    padding: 40px 25px;
-    border-radius: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(176, 137, 104, 0.1);
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-}
-
-.contact-card:hover {
-    transform: translateY(-8px);
-    border-color: #B08968;
-    box-shadow: 0 20px 40px rgba(176, 137, 104, 0.15);
-}
-
-.contact-icon {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-    color: #B08968;
-}
-
-.contact-card svg {
-    width: 32px;
-    height: 32px;
-    color: #B08968;
-    margin-bottom: 10px;
-}
-
-.contact-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    color: #2C2418;
-    margin-bottom: 10px;
-}
-
-.contact-card p {
-    color: #B08968;
+.card p {
+    color: #5A4A3A;
     font-size: 1rem;
-    font-weight: 500;
-    margin: 0;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background: linear-gradient(135deg, #B08968 0%, #9A7659 100%);
     text-align: center;
-    word-break: break-word;
+    padding: 5rem 2rem;
+    margin-top: 2rem;
+}
+
+.cta-banner h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-banner p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-light {
+    background: white;
+    color: #B08968;
+}
+
+.btn-light:hover {
+    background: #F5EFE6;
+    transform: translateY(-3px);
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 40px;
-    background: #2C2418;
+    background-color: #2C2418;
     color: #D1C7BC;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20b859;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        gap: 15px;
-        padding: 15px 5%;
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 3rem;
     }
     
-    .hero-description {
+    .hero-tag {
+        font-size: 0.9rem;
+    }
+    
+    .hero p {
         font-size: 1rem;
     }
     
-    .btn {
-        padding: 14px 32px;
-        font-size: 1rem;
+    .btn-outline {
+        margin-left: 0;
+        margin-top: 1rem;
     }
     
-    .section h2 {
-        font-size: 2.2rem;
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
     }
     
-    .section {
-        padding: 60px 20px;
+    .section-title h2 {
+        font-size: 2.5rem;
     }
     
-    .cta {
-        padding: 60px 20px;
+    .cta-banner h2 {
+        font-size: 2rem;
     }
     
-    .cta h2 {
-        font-size: 2.2rem;
+    .card {
+        padding: 1.8rem;
     }
     
-    .cta-container p {
-        font-size: 1rem;
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+        bottom: 20px;
+        right: 20px;
     }
-    
-    .btn-cta {
-        padding: 14px 35px;
-        font-size: 1rem;
-    }
-    
-    .contact-section h2 {
-        font-size: 2.2rem;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0 15px;
-    }
-    
-    .contact-card {
-        padding: 30px 20px;
-    }
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Inter', sans-serif;
+background: #f8f5f0;
+color: #2b2b2b;
+line-height: 1.7;
+}
+
+/* Navigation */
+
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+background: rgba(255,255,255,0.92);
+backdrop-filter: blur(10px);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 8%;
+z-index: 1000;
+border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo {
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.8rem;
+font-weight: 700;
+}
+
+.nav-links {
+display: flex;
+gap: 30px;
+}
+
+.nav-links a {
+text-decoration: none;
+color: #2b2b2b;
+font-weight: 500;
+}
+
+/* Hero */
+
+.hero {
+min-height: 100vh;
+background:
+linear-gradient(
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.35)
+),
+url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=1600&q=80");
+
+```
+background-size: cover;
+background-position: center;
+
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 120px 20px;
+```
+
+}
+
+.hero-content {
+max-width: 850px;
+}
+
+.hero h1 {
+color: white;
+font-size: 5rem;
+font-family: 'Cormorant Garamond', serif;
+margin-bottom: 20px;
+}
+
+.hero p {
+color: white;
+font-size: 1.3rem;
+margin-bottom: 35px;
+}
+
+/* Button */
+
+.btn {
+display: inline-block;
+padding: 16px 34px;
+background: #b08968;
+color: white;
+text-decoration: none;
+border-radius: 40px;
+transition: 0.3s ease;
+font-weight: 600;
+}
+
+.btn:hover {
+transform: translateY(-2px);
+}
+
+/* Sections */
+
+.section {
+max-width: 1200px;
+margin: auto;
+padding: 100px 30px;
+}
+
+.section h2 {
+text-align: center;
+font-size: 3rem;
+margin-bottom: 40px;
+font-family: 'Cormorant Garamond', serif;
+}
+
+.section p {
+max-width: 850px;
+margin: 0 auto 20px;
+text-align: center;
+}
+
+/* Cards */
+
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
+margin-top: 50px;
+}
+
+.card {
+background: white;
+padding: 35px;
+border-radius: 20px;
+box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-6px);
+}
+
+.card h3 {
+margin-bottom: 12px;
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.7rem;
+}
+
+/* CTA */
+
+.cta {
+background: linear-gradient(135deg,#d6b38a,#b08968);
+text-align: center;
+padding: 100px 20px;
+}
+
+.cta h2 {
+color: white;
+margin-bottom: 25px;
+font-size: 3rem;
+font-family: 'Cormorant Garamond', serif;
+}
+
+/* Footer */
+
+footer {
+text-align: center;
+padding: 40px;
+background: #efe7dc;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+```
+nav {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.section h2 {
+    font-size: 2.2rem;
+}
+
+.cta h2 {
+    font-size: 2.2rem;
+}
+```
+
+}
+
 }
