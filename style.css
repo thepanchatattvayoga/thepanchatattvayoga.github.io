@@ -1,5 +1,5 @@
-/* === MIDNIGHT GRAND LUXURY CSS === */
-/* Dark, Dramatic, Ultra-Luxury Version */
+/* === LUXURY YOGA BRAND CSS === */
+/* Elegant Cream & Gold Version */
 
 * {
     margin: 0;
@@ -13,8 +13,8 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0F0E0C;
-    color: #E8E2D9;
+    background-color: #FCF9F5;
+    color: #2C2418;
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -33,7 +33,7 @@ h2 {
     font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 500;
     letter-spacing: -0.01em;
-    color: #F5EFE6;
+    color: #2C2418;
     margin-bottom: 1.2rem;
     text-align: center;
 }
@@ -42,21 +42,20 @@ h3 {
     font-size: 1.6rem;
     font-weight: 500;
     margin-bottom: 0.8rem;
-    color: #F5EFE6;
 }
 
 p {
     font-size: 1.05rem;
-    color: #B8A99A;
+    color: #5A4A3A;
 }
 
-/* Navigation - Dark Glass */
+/* Navigation - Glassmorphism Premium */
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(15, 14, 12, 0.92);
+    background: rgba(252, 249, 245, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     display: flex;
@@ -65,13 +64,13 @@ nav {
     padding: 1.2rem 6%;
     z-index: 1000;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    border-bottom: 1px solid rgba(176, 137, 104, 0.15);
 }
 
 .logo {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #D4AF37;
+    color: #B08968;
     letter-spacing: 1px;
     font-family: 'Cormorant Garamond', serif;
 }
@@ -84,7 +83,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #E8E2D9;
+    color: #2C2418;
     font-size: 1rem;
     font-weight: 500;
     font-family: 'Cormorant Garamond', serif;
@@ -94,7 +93,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #D4AF37;
+    color: #B08968;
 }
 
 .nav-links a::after {
@@ -104,7 +103,7 @@ nav {
     left: 0;
     width: 0%;
     height: 2px;
-    background: #D4AF37;
+    background: #B08968;
     transition: width 0.3s ease;
 }
 
@@ -112,13 +111,13 @@ nav {
     width: 100%;
 }
 
-/* Hero Section - Dramatic & Grand */
+/* Hero Section - Grand & Luxurious */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(rgba(15, 14, 12, 0.5), rgba(15, 14, 12, 0.6)),
-        url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=2000&q=90");
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.45)),
+        url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=2000&q=90");
     background-size: cover;
-    background-position: center 40%;
+    background-position: center 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,50 +126,37 @@ nav {
     position: relative;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, transparent 0%, rgba(15,14,12,0.4) 100%);
-    pointer-events: none;
-}
-
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
-    animation: fadeUp 1.2s ease-out;
+    animation: fadeUp 1s ease-out;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-tag {
-    color: #D4AF37;
-    font-size: clamp(0.85rem, 2vw, 1.1rem);
-    font-family: 'Inter', sans-serif;
-    letter-spacing: 4px;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 400;
-    text-align: center;
 }
 
 .hero h1 {
-    color: #F5EFE6;
+    color: white;
     font-size: clamp(2.8rem, 7vw, 5.5rem);
     font-weight: 700;
     margin-bottom: 0.5rem;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    text-shadow: 0 2px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.hero-tag {
+    color: rgba(255,255,255,0.9);
+    font-size: clamp(0.85rem, 2vw, 1.2rem);
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
     text-align: center;
 }
 
 .hero p {
-    color: rgba(232, 226, 217, 0.9);
+    color: rgba(255,255,255,0.95);
     font-size: clamp(1rem, 2vw, 1.25rem);
     margin-bottom: 2.5rem;
     max-width: 600px;
@@ -179,12 +165,12 @@ nav {
     line-height: 1.8;
 }
 
-/* Buttons - Gold Accent */
+/* Buttons - Premium Gold/Cream */
 .btn {
     display: inline-block;
     padding: 1rem 2.5rem;
-    background: #D4AF37;
-    color: #0F0E0C;
+    background: #B08968;
+    color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
@@ -192,26 +178,26 @@ nav {
     border: 1.5px solid transparent;
     font-size: 1rem;
     letter-spacing: 0.5px;
-    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
 }
 
 .btn:hover {
-    background: #C5A028;
+    background: #9A7659;
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px -10px rgba(212, 175, 55, 0.35);
+    box-shadow: 0 15px 25px -10px rgba(176, 137, 104, 0.4);
 }
 
 .btn-outline {
     background: transparent;
-    border: 1.5px solid rgba(212, 175, 55, 0.6);
-    color: #D4AF37;
+    border: 1.5px solid white;
+    color: white;
 }
 
 .btn-outline:hover {
-    background: #D4AF37;
-    color: #0F0E0C;
-    border-color: #D4AF37;
+    background: white;
+    color: #2C2418;
+    border-color: white;
 }
 
 .hero-buttons {
@@ -231,7 +217,7 @@ nav {
 }
 
 .section-alt {
-    background-color: #161412;
+    background-color: #F5EFE6;
 }
 
 .section > p {
@@ -242,7 +228,7 @@ nav {
     line-height: 1.8;
 }
 
-/* Cards - Dark Luxury */
+/* Cards - Premium & Spacious */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -254,13 +240,13 @@ nav {
 }
 
 .card {
-    background: #161412;
+    background: white;
     padding: 2.5rem 2rem;
     border-radius: 24px;
     text-align: center;
     transition: all 0.4s ease;
-    border: 1px solid rgba(212, 175, 55, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(176, 137, 104, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,8 +254,8 @@ nav {
 
 .card:hover {
     transform: translateY(-10px);
-    border-color: rgba(212, 175, 55, 0.3);
-    box-shadow: 0 25px 40px -15px rgba(212, 175, 55, 0.15);
+    border-color: #B08968;
+    box-shadow: 0 25px 40px -15px rgba(176, 137, 104, 0.2);
 }
 
 .card-icon {
@@ -278,68 +264,49 @@ nav {
 }
 
 .card h3 {
-    color: #F5EFE6;
+    color: #2C2418;
 }
 
 .card p {
-    color: #B8A99A;
+    color: #5A4A3A;
     font-size: 0.95rem;
     line-height: 1.7;
 }
 
 /* CTA Banner */
 .cta-banner {
-    background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+    background: linear-gradient(135deg, #B08968 0%, #9A7659 100%);
     text-align: center;
     padding: 5rem 2rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-banner::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    pointer-events: none;
 }
 
 .cta-banner h2 {
-    color: #0F0E0C;
+    color: white;
     margin-bottom: 1rem;
-    position: relative;
-    z-index: 2;
 }
 
 .cta-banner p {
-    color: rgba(15, 14, 12, 0.85);
+    color: rgba(255,255,255,0.9);
     margin-bottom: 2rem;
     font-size: 1.1rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
-    z-index: 2;
 }
 
 .btn-light {
-    background: #0F0E0C;
-    color: #D4AF37;
-    position: relative;
-    z-index: 2;
+    background: white;
+    color: #B08968;
 }
 
 .btn-light:hover {
-    background: #2C2418;
-    color: #F5EFE6;
+    background: #F5EFE6;
+    color: #9A7659;
 }
 
 /* Contact Section */
 .contact-section {
-    background: #161412;
+    background: #F5EFE6;
 }
 
 .contact-grid {
@@ -351,13 +318,13 @@ nav {
 }
 
 .contact-card {
-    background: #1C1A17;
+    background: white;
     padding: 2.5rem 2rem;
     border-radius: 20px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(176, 137, 104, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -365,8 +332,8 @@ nav {
 
 .contact-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(212, 175, 55, 0.3);
-    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+    border-color: #b08968;
+    box-shadow: 0 20px 40px rgba(176, 137, 104, 0.15);
 }
 
 .contact-icon {
@@ -377,13 +344,13 @@ nav {
 .contact-card h3 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.4rem;
-    color: #F5EFE6;
+    color: #2C2418;
     margin-bottom: 0.8rem;
 }
 
 .contact-card a {
     text-decoration: none;
-    color: #D4AF37;
+    color: #b08968;
     font-size: 0.95rem;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -391,18 +358,17 @@ nav {
 }
 
 .contact-card a:hover {
-    color: #F5EFE6;
+    color: #9A7659;
     text-decoration: underline;
 }
 
 /* Footer */
 footer {
-    background-color: #0A0908;
-    color: #8A7E72;
+    background-color: #2C2418;
+    color: #D1C7BC;
     text-align: center;
     padding: 2.5rem 1rem;
     font-size: 0.9rem;
-    border-top: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 /* WhatsApp Float Button */
