@@ -597,5 +597,141 @@ nav {
 ```
 
 }
+    /* === IMPROVED CTA SECTION === */
+.cta {
+    background: linear-gradient(135deg, #d6b38a, #b08968);
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 3rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.cta-container p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 16px 40px;
+    background: white;
+    color: #b08968;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-cta:hover {
+    background: #2C2418;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* === PREMIUM CONTACT SECTION === */
+.contact-section {
+    background: #F5EFE6;
+    margin-top: 0;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #2C2418;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(176, 137, 104, 0.1);
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    border-color: #b08968;
+    box-shadow: 0 20px 40px rgba(176, 137, 104, 0.15);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: #2C2418;
+    margin-bottom: 12px;
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: #b08968;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    word-break: break-word;
+}
+
+.contact-card a:hover {
+    color: #9A7659;
+    text-decoration: underline;
+}
+
+/* Mobile responsive for contact section */
+@media (max-width: 768px) {
+    .cta h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-container p {
+        font-size: 1rem;
+    }
+    
+    .contact-section h2 {
+        font-size: 2.2rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .contact-card {
+        padding: 25px 20px;
+    }
+}
 
 }
+
+
