@@ -1,897 +1,118 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>The Pancha Tattva Yoga | Rupa Indukuri | Luxury Yoga & Wellness</title>
-    <meta name="description" content="Experience transformative yoga with Rupa Indukuri. Pancha Tattva Yoga - Ancient wisdom for modern wellbeing. Private sessions in Switzerland.">
-    <meta name="keywords" content="yoga, pancha tattva, rupa indukuri, switzerland yoga, luxury yoga, wellness">
-    <meta name="author" content="Rupa Indukuri">
-    
-    <style>
-        /* === LUXURY YOGA BRAND - COMPLETE CSS === */
-        
-        /* Font Import */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
-        
-        /* Reset & Base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FCF9F5;
-            color: #2C2418;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-        
-        /* Typography */
-        h1, h2, h3, .logo, .nav-links a, .footer-logo {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        
-        h1 {
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
-        
-        h2 {
-            font-size: 3.2rem;
-            font-weight: 500;
-            letter-spacing: -0.01em;
-            color: #2C2418;
-            margin-bottom: 1rem;
-        }
-        
-        h3 {
-            font-size: 1.8rem;
-            font-weight: 500;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(252, 249, 245, 0.95);
-            backdrop-filter: blur(12px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 6%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(176, 137, 104, 0.2);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.02);
-        }
-        
-        .logo {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #B08968;
-            letter-spacing: 1px;
-        }
-        
-        .logo span {
-            color: #2C2418;
-            font-weight: 500;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: #2C2418;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-links a:hover {
-            color: #B08968;
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background: #B08968;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.45)),
-                url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=2000&q=90");
-            background-size: cover;
-            background-position: center 30%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 1rem;
-            position: relative;
-        }
-        
-        .hero-content {
-            max-width: 900px;
-            animation: fadeUp 1s ease-out;
-        }
-        
-        .hero h1 {
-            color: white;
-            font-size: 5.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 2px 15px rgba(0,0,0,0.2);
-        }
-        
-        .hero-tag {
-            color: rgba(255,255,255,0.9);
-            font-size: 1.2rem;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 3px;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            font-weight: 300;
-        }
-        
-        .hero p {
-            color: white;
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: #B08968;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.4s ease;
-            border: 1px solid transparent;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .btn-primary {
-            background: #B08968;
-        }
-        
-        .btn-primary:hover {
-            background: #9A7659;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 25px -10px rgba(176, 137, 104, 0.4);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 1.5px solid white;
-            margin-left: 1rem;
-        }
-        
-        .btn-outline:hover {
-            background: white;
-            color: #2C2418;
-            border-color: white;
-            transform: translateY(-3px);
-        }
-        
-        /* Sections */
-        .section {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-        
-        .section-alt {
-            background-color: #F5EFE6;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-title h2 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .section-title .subtitle {
-            color: #7A6A5A;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-        
-        /* Cards */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 24px;
-            text-align: center;
-            transition: all 0.4s ease;
-            border: 1px solid rgba(176, 137, 104, 0.1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: #B08968;
-            box-shadow: 0 25px 40px -15px rgba(176, 137, 104, 0.2);
-        }
-        
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-        
-        .card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: #2C2418;
-        }
-        
-        .card p {
-            color: #5A4A3A;
-            font-size: 0.95rem;
-        }
-        
-        /* Journey CTA */
-        .journey-cta {
-            background: linear-gradient(135deg, #F5EFE6 0%, #EDE4D8 100%);
-            padding: 5rem 2rem;
-        }
-        
-        .journey-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .journey-badge {
-            display: inline-block;
-            background: rgba(176, 137, 104, 0.15);
-            color: #B08968;
-            padding: 0.3rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-        }
-        
-        .journey-cta h2 {
-            font-size: 3rem;
-            margin-bottom: 1.2rem;
-            color: #2C2418;
-        }
-        
-        .journey-cta p {
-            max-width: 650px;
-            margin: 0 auto 2rem;
-            color: #5A4A3A;
-            font-size: 1.1rem;
-        }
-        
-        .btn-outline-dark {
-            background: transparent;
-            border: 1.5px solid #B08968;
-            color: #B08968;
-            margin-left: 1rem;
-        }
-        
-        .btn-outline-dark:hover {
-            background: #B08968;
-            color: white;
-        }
-        
-        .journey-features {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-        
-        .feature-badge {
-            background: white;
-            padding: 0.6rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            color: #2C2418;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        /* === LUXURY FOOTER - COMPLETELY REDESIGNED === */
-        .luxury-footer {
-            background: #1A1510;
-            position: relative;
-            margin-top: 0;
-        }
-        
-        .luxury-footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #B08968, #D4B896, #B08968);
-        }
-        
-        .footer-main {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 4rem 6rem 3rem;
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        /* Brand Column */
-        .footer-brand-col {
-            padding-right: 1rem;
-        }
-        
-        .footer-luxury-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: 600;
-            color: #B08968;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-        
-        .footer-luxury-logo span {
-            color: #D4B896;
-            font-weight: 400;
-        }
-        
-        .footer-description {
-            color: #9E9689;
-            font-size: 0.9rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-social {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .footer-social a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            background: rgba(176, 137, 104, 0.12);
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            color: #D4B896;
-        }
-        
-        .footer-social a:hover {
-            background: #B08968;
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        /* Column Headings */
-        .footer-col h4 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #D4B896;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.5px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .footer-col h4::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 35px;
-            height: 2px;
-            background: #B08968;
-        }
-        
-        .footer-col ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-col li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-col a {
-            color: #9E9689;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        
-        .footer-col a:hover {
-            color: #B08968;
-            transform: translateX(5px);
-        }
-        
-        /* Contact Items */
-        .contact-item-luxury {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-icon-luxury {
-            font-size: 1rem;
-            min-width: 28px;
-            color: #B08968;
-        }
-        
-        .contact-item-luxury a {
-            color: #9E9689;
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: color 0.3s ease;
-            word-break: break-all;
-        }
-        
-        .contact-item-luxury a:hover {
-            color: #B08968;
-            transform: none;
-        }
-        
-        .contact-item-luxury p {
-            color: #9E9689;
-            font-size: 0.85rem;
-        }
-        
-        /* Footer CTA Button */
-        .footer-cta-btn {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.7rem 1.5rem;
-            background: #B08968;
-            color: white;
-            text-decoration: none;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-cta-btn:hover {
-            background: #9A7659;
-            transform: translateY(-2px);
-        }
-        
-        /* Footer Bottom */
-        .footer-bottom-luxury {
-            border-top: 1px solid rgba(212, 184, 150, 0.15);
-            padding: 1.8rem 6rem;
-            text-align: center;
-        }
-        
-        .footer-bottom-luxury p {
-            color: #6B655B;
-            font-size: 0.8rem;
-            letter-spacing: 0.5px;
-        }
-        
-        .footer-bottom-luxury a {
-            color: #B08968;
-            text-decoration: none;
-        }
-        
-        .footer-bottom-luxury a:hover {
-            text-decoration: underline;
-        }
-        
-        /* WhatsApp Float */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            text-decoration: none;
-            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
-            transition: all 0.3s ease;
-            z-index: 99;
-        }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #20b859;
-        }
-        
-        /* Back to Top */
-        .back-to-top {
-            position: fixed;
-            bottom: 110px;
-            right: 30px;
-            width: 45px;
-            height: 45px;
-            background: #B08968;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 1.3rem;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 98;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .back-to-top:hover {
-            background: #9A7659;
-            transform: translateY(-3px);
-        }
-        
-        /* Animations */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Mobile Responsive */
-        @media (max-width: 1100px) {
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
-            
-            .footer-main {
-                padding: 3rem 2rem;
-            }
-            
-            .footer-bottom-luxury {
-                padding: 1.5rem 2rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                padding: 1rem;
-                gap: 0.8rem;
-            }
-            
-            .nav-links {
-                gap: 1.5rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .hero h1 {
-                font-size: 3rem;
-            }
-            
-            .hero-tag {
-                font-size: 0.8rem;
-                letter-spacing: 2px;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .btn-outline {
-                margin-left: 0;
-                margin-top: 1rem;
-            }
-            
-            .hero-buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                align-items: center;
-            }
-            
-            .section-title h2 {
-                font-size: 2.5rem;
-            }
-            
-            .journey-cta h2 {
-                font-size: 2rem;
-            }
-            
-            .btn-outline-dark {
-                margin-left: 0;
-                margin-top: 1rem;
-            }
-            
-            .journey-buttons {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
-            }
-            
-            .footer-brand-col {
-                padding-right: 0;
-            }
-            
-            .footer-col h4::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            
-            .footer-social {
-                justify-content: center;
-            }
-            
-            .contact-item-luxury {
-                justify-content: center;
-            }
-            
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-                bottom: 20px;
-                right: 20px;
-            }
-            
-            .back-to-top {
-                bottom: 90px;
-                right: 20px;
-                width: 40px;
-                height: 40px;
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pancha Tattva Yoga | Rupa Indukuri</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">Pancha Tattva <span>Yoga</span></div>
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Specializations</a>
-            <a href="#">Gallery</a>
-            <a href="#">Contact</a>
-        </div>
-    </nav>
+<nav>
+<div class="logo">The Pancha Tattva Yoga</div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-tag">Rupa Indukuri</div>
-            <h1>The Pancha Tattva Yoga</h1>
-            <p>Ancient wisdom for modern wellbeing — Transform your body, mind, and spirit through traditional yoga practices.</p>
-            <div class="hero-buttons">
-                <a href="#" class="btn btn-primary">Book a Session →</a>
-                <a href="#" class="btn btn-outline">Learn More</a>
-            </div>
-        </div>
-    </section>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-    <!-- Specializations Section -->
-    <section class="section">
-        <div class="section-title">
-            <span class="subtitle">Ancient Wisdom</span>
-            <h2>My Specializations</h2>
-        </div>
-        <div class="cards-grid">
-            <div class="card">
-                <div class="card-icon">🧘‍♀️</div>
-                <h3>Hatha Yoga</h3>
-                <p>Traditional postures and breath control for balance and strength.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🌿</div>
-                <h3>Pranayama</h3>
-                <p>Breathing techniques to energize and purify the body.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">✨</div>
-                <h3>Meditation</h3>
-                <p>Mindfulness practices for inner peace and clarity.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🕉️</div>
-                <h3>Pancha Tattva</h3>
-                <p>Ancient wisdom of the five elements for holistic wellbeing.</p>
-            </div>
-        </div>
-    </section>
+<section class="hero">
 
-    <!-- Journey CTA Section -->
-    <section class="journey-cta">
-        <div class="journey-container">
-            <span class="journey-badge">Begin Your Transformation</span>
-            <h2>Start Your Wellness Journey Today</h2>
-            <p>Whether you're a beginner or an experienced practitioner, Rupa guides you with compassion and ancient wisdom.</p>
-            <div class="journey-buttons">
-                <a href="#" class="btn btn-primary">Book Your Session →</a>
-                <a href="#" class="btn-outline-dark">Free Consultation</a>
-            </div>
-            <div class="journey-features">
-                <div class="feature-badge">✨ 1-on-1 Sessions</div>
-                <div class="feature-badge">🧘‍♀️ All Levels Welcome</div>
-                <div class="feature-badge">🌿 Traditional Approach</div>
-            </div>
-        </div>
-    </section>
+<div class="hero-content">
 
-    <!-- === LUXURY FOOTER - COMPLETELY REDESIGNED === -->
-    <footer class="luxury-footer">
-        <div class="footer-main">
-            <div class="footer-grid">
-                
-                <!-- Brand Column -->
-                <div class="footer-brand-col">
-                    <div class="footer-luxury-logo">Pancha Tattva <span>Yoga</span></div>
-                    <p class="footer-description">Ancient wisdom for modern wellbeing. Experience transformative yoga with Rupa Indukuri in the heart of Switzerland.</p>
-                    <div class="footer-social">
-                        <a href="https://instagram.com/@Thekaroyogi" target="_blank" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="Facebook">📘</a>
-                        <a href="#" aria-label="YouTube">▶️</a>
-                        <a href="#" aria-label="LinkedIn">🔗</a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div class="footer-col">
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Rupa</a></li>
-                        <li><a href="#">Specializations</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Offerings -->
-                <div class="footer-col">
-                    <h4>Offerings</h4>
-                    <ul>
-                        <li><a href="#">Private Sessions</a></li>
-                        <li><a href="#">Group Classes</a></li>
-                        <li><a href="#">Corporate Yoga</a></li>
-                        <li><a href="#">Retreats</a></li>
-                        <li><a href="#">Workshops</a></li>
-                        <li><a href="#">Online Classes</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact Column -->
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <div class="contact-item-luxury">
-                        <span class="contact-icon-luxury">✉️</span>
-                        <a href="mailto:rupadevi1997@gmail.com">rupadevi1997@gmail.com</a>
-                    </div>
-                    <div class="contact-item-luxury">
-                        <span class="contact-icon-luxury">📞</span>
-                        <a href="tel:+41779469147">+41 77 946 91 47</a>
-                    </div>
-                    <div class="contact-item-luxury">
-                        <span class="contact-icon-luxury">📷</span>
-                        <a href="https://instagram.com/@Thekaroyogi" target="_blank">@Thekaroyogi</a>
-                    </div>
-                    <div class="contact-item-luxury">
-                        <span class="contact-icon-luxury">📍</span>
-                        <p>Zürich, Switzerland</p>
-                    </div>
-                    <a href="#" class="footer-cta-btn">Book a Session →</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom-luxury">
-            <p>&copy; 2025 The Pancha Tattva Yoga — Rupa Indukuri. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-        </div>
-    </footer>
+<h1>The Pancha Tattva Yoga</h1>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/41779469147" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-        💬
-    </a>
+<p>
+A sanctuary for balance, wellness, mindfulness and inner transformation.
+</p>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+<a class="btn"
+href="https://wa.me/41779469147?text=Hi%20Rupa%2C%20I%20would%20like%20to%20book%20a%20session."
+target="_blank">
+Book Your Session </a>
 
-    <script>
-        // Back to top button functionality
-        const backToTop = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        });
-        
-        backToTop.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
+</div>
+
+</section>
+
+<section id="about" class="section">
+
+<h2>Meet Rupa Indukuri</h2>
+
+<p>
+Internationally recognized yoga instructor dedicated to helping individuals cultivate physical vitality, mental clarity and inner peace through authentic yoga practices.
+</p>
+
+<p>
+Certified with a Diploma in Yoga, Master Certificate in Yoga and 500+ hours of advanced yoga teacher training.
+</p>
+
+</section>
+
+<section id="services" class="section">
+
+<h2>Specializations</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Traditional Yoga</h3>
+<p>Build strength, flexibility and harmony.</p>
+</div>
+
+<div class="card">
+<h3>Power Yoga</h3>
+<p>Dynamic sessions for fitness and energy.</p>
+</div>
+
+<div class="card">
+<h3>Meditation</h3>
+<p>Calm the mind and deepen awareness.</p>
+</div>
+
+<div class="card">
+<h3>Stress Management</h3>
+<p>Restore balance through mindful practice.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>Start Your Wellness Journey Today</h2>
+
+<a class="btn"
+href="https://wa.me/41779469147?text=Hi%20Rupa%2C%20I%20would%20like%20to%20book%20a%20session."
+target="_blank">
+Book Now </a>
+
+</section>
+
+<section id="contact" class="section">
+
+<h2>Connect</h2>
+
+<p>Email: rupadevi1997@gmail.com</p>
+<p>Phone: +41 77 946 91 47</p>
+<p>Instagram: @Thekaroyogi</p>
+
+</section>
+
+<footer>
+<p>© 2026 The Pancha Tattva Yoga</p>
+</footer>
+
 </body>
 </html>
