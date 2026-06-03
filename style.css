@@ -1,6 +1,6 @@
 /* === THE PANCHA TATTVA YOGA === */
 /* Mobile-First | iOS + Android + Desktop */
-/* Elegant Cream & Gold — Complete Version */
+/* Elegant Cream & Gold — Updated */
 
 *,
 *::before,
@@ -28,6 +28,100 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* ─── MODAL ─── */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 14, 12, 0.65);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 1rem;
+}
+
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #FCF9F5;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    transform: translateY(16px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    border: 1px solid rgba(176, 137, 104, 0.15);
+}
+
+.modal:target .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #5A4A3A;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    color: #2C2418;
+    margin-bottom: 0.4rem;
+}
+
+.modal p {
+    color: #5A4A3A;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.modal-buttons .btn {
+    width: 100%;
+    margin: 0;
+}
+
+.btn-modal-outline {
+    background: transparent;
+    border: 1.5px solid #B08968;
+    color: #B08968;
+}
+
+.btn-modal-outline:hover {
+    background: #B08968;
+    color: white;
+}
+
 /* ─── TYPOGRAPHY ─── */
 h1, h2, h3, .logo {
     font-family: 'Cormorant Garamond', serif;
@@ -35,7 +129,7 @@ h1, h2, h3, .logo {
 }
 
 h2 {
-    font-size: 1.9rem;
+    font-size: 1.85rem;
     letter-spacing: -0.01em;
     color: #2C2418;
     margin-bottom: 0.4rem;
@@ -55,11 +149,12 @@ p {
 
 .section-subtitle {
     color: #8A7A6A;
-    font-size: 0.9rem;
-    margin-bottom: 1.8rem;
+    font-size: 0.85rem;
+    margin-bottom: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 400;
+    text-align: center;
 }
 
 /* ─── NAVIGATION ─── */
@@ -74,35 +169,58 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 4%;
+    padding: 0.7rem 3%;
     z-index: 1000;
     border-bottom: 1px solid rgba(176, 137, 104, 0.12);
 }
 
 .logo {
-    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    text-decoration: none;
+}
+
+.logo-placeholder {
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(135deg, #B08968, #9A7659);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.45rem;
+    color: white;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    flex-shrink: 0;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.88rem;
     font-weight: 700;
     color: #B08968;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.4px;
     white-space: nowrap;
 }
 
 .nav-links {
     display: flex;
-    gap: 0.9rem;
+    gap: 0.55rem;
     align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #2C2418;
-    font-size: 0.78rem;
+    font-size: 0.68rem;
     font-weight: 500;
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 0.3px;
-    padding: 0.35rem 0;
+    padding: 0.3rem 0;
     position: relative;
     transition: color 0.25s ease;
     white-space: nowrap;
@@ -133,9 +251,9 @@ nav {
     min-height: 100dvh;
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.48)),
-        url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=1200&q=85");
+        url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=2000&q=90");
     background-size: cover;
-    background-position: center 35%;
+    background-position: center 40%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,7 +283,7 @@ nav {
 
 .hero h1 {
     color: #fff;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: 600;
     margin-bottom: 0.6rem;
     text-shadow: 0 2px 12px rgba(0,0,0,0.25);
@@ -174,7 +292,7 @@ nav {
 
 .hero p {
     color: rgba(255,255,255,0.92);
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     margin-bottom: 1.6rem;
     max-width: 92%;
     font-weight: 300;
@@ -239,7 +357,7 @@ nav {
 /* ─── STATS BAR ─── */
 .stats-bar {
     background: #F5EFE6;
-    padding: 1.8rem 1.2rem;
+    padding: 1.6rem 1rem;
     border-bottom: 1px solid rgba(176, 137, 104, 0.1);
 }
 
@@ -248,7 +366,7 @@ nav {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
+    gap: 1rem;
     text-align: center;
 }
 
@@ -256,19 +374,19 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.25rem;
 }
 
 .stat-number {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #B08968;
     line-height: 1;
 }
 
 .stat-label {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     color: #5A4A3A;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -299,16 +417,16 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1.2rem;
+    gap: 0.45rem;
+    margin-top: 1.1rem;
 }
 
 .lang-tag {
     background: rgba(176, 137, 104, 0.1);
     color: #B08968;
-    padding: 0.35rem 0.9rem;
+    padding: 0.3rem 0.8rem;
     border-radius: 50px;
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.5px;
     border: 1px solid rgba(176, 137, 104, 0.15);
@@ -318,8 +436,8 @@ nav {
 .cards-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    gap: 0.9rem;
+    margin-top: 1.4rem;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -327,7 +445,7 @@ nav {
 
 .card {
     background: white;
-    padding: 1.5rem 1.2rem;
+    padding: 1.4rem 1.1rem;
     border-radius: 18px;
     text-align: center;
     transition: all 0.35s ease;
@@ -349,19 +467,19 @@ nav {
 }
 
 .card-icon {
-    font-size: 1.8rem;
-    margin-bottom: 0.7rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.6rem;
     line-height: 1;
 }
 
 .card h3 {
     color: #2C2418;
-    font-size: 1.15rem;
+    font-size: 1.12rem;
 }
 
 .card p {
     color: #5A4A3A;
-    font-size: 0.86rem;
+    font-size: 0.85rem;
     line-height: 1.65;
 }
 
@@ -385,8 +503,8 @@ nav {
 .why-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    gap: 0.9rem;
+    margin-top: 1.4rem;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -394,7 +512,7 @@ nav {
 
 .why-card {
     background: rgba(255,255,255,0.04);
-    padding: 1.5rem 1.2rem;
+    padding: 1.4rem 1.1rem;
     border-radius: 18px;
     text-align: center;
     border: 1px solid rgba(212, 175, 55, 0.1);
@@ -411,19 +529,19 @@ nav {
 }
 
 .why-icon {
-    font-size: 1.8rem;
-    margin-bottom: 0.7rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.6rem;
 }
 
 .why-card h3 {
     color: #F5EFE6;
-    font-size: 1.15rem;
-    margin-bottom: 0.4rem;
+    font-size: 1.12rem;
+    margin-bottom: 0.3rem;
 }
 
 .why-card p {
     color: #B8A99A;
-    font-size: 0.86rem;
+    font-size: 0.85rem;
     line-height: 1.65;
 }
 
@@ -431,8 +549,8 @@ nav {
 .gallery-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0.8rem;
-    margin-top: 1.5rem;
+    gap: 0.7rem;
+    margin-top: 1.4rem;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -462,8 +580,8 @@ nav {
 }
 
 .gallery-note {
-    margin-top: 1.2rem;
-    font-size: 0.8rem;
+    margin-top: 1rem;
+    font-size: 0.78rem;
     color: #9A8A7A;
 }
 
@@ -471,41 +589,7 @@ nav {
     background: rgba(176, 137, 104, 0.1);
     padding: 0.15rem 0.4rem;
     border-radius: 4px;
-    font-size: 0.75rem;
-}
-
-/* ─── CTA BANNER ─── */
-.cta-banner {
-    background: linear-gradient(135deg, #B08968 0%, #9A7659 100%);
-    text-align: center;
-    padding: 3rem 1.2rem;
-}
-
-.cta-inner {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.cta-banner h2 {
-    color: white;
-    margin-bottom: 0.5rem;
-    font-size: 1.7rem;
-}
-
-.cta-banner p {
-    color: rgba(255,255,255,0.92);
-    margin-bottom: 1.4rem;
-    font-size: 0.92rem;
-}
-
-.btn-light {
-    background: white;
-    color: #B08968;
-}
-
-.btn-light:hover {
-    background: #F5EFE6;
-    color: #9A7659;
+    font-size: 0.72rem;
 }
 
 /* ─── CONTACT ─── */
@@ -516,14 +600,14 @@ nav {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0.9rem;
+    gap: 0.8rem;
     max-width: 900px;
-    margin: 1.5rem auto 0;
+    margin: 1.4rem auto 0;
 }
 
 .contact-card {
     background: white;
-    padding: 1.4rem 1.2rem;
+    padding: 1.3rem 1.1rem;
     border-radius: 16px;
     text-align: center;
     transition: all 0.3s ease;
@@ -547,21 +631,21 @@ nav {
 }
 
 .contact-icon {
-    font-size: 1.7rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.45rem;
     line-height: 1;
 }
 
 .contact-card h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
+    font-size: 1.12rem;
     color: #2C2418;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.2rem;
 }
 
 .contact-card span {
     color: #B08968;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 500;
     word-break: break-word;
 }
@@ -569,7 +653,7 @@ nav {
 /* ─── FOOTER ─── */
 footer {
     background-color: #2C2418;
-    padding: 2rem 1.2rem;
+    padding: 1.8rem 1.2rem;
     text-align: center;
 }
 
@@ -580,21 +664,21 @@ footer {
 
 .footer-brand {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     color: #D4AF37;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.15rem;
     font-weight: 600;
 }
 
 .footer-location {
     color: #B8A99A;
-    font-size: 0.85rem;
-    margin-bottom: 0.8rem;
+    font-size: 0.82rem;
+    margin-bottom: 0.7rem;
 }
 
 .footer-copy {
     color: #8A7E72;
-    font-size: 0.78rem;
+    font-size: 0.75rem;
 }
 
 /* ─── WHATSAPP FLOAT ─── */
@@ -643,15 +727,15 @@ footer {
 /* ═══════════════════════════════════════ */
 @media (min-width: 481px) {
     h2 {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
     }
 
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
 
     .hero p {
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
 
     .stats-grid {
@@ -661,7 +745,7 @@ footer {
 
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.2rem;
+        gap: 1.1rem;
     }
 
     .why-grid {
@@ -689,6 +773,15 @@ footer {
     .hero-buttons .btn {
         width: auto;
     }
+
+    .modal-buttons {
+        flex-direction: row;
+    }
+
+    .modal-buttons .btn {
+        width: auto;
+        flex: 1;
+    }
 }
 
 /* ═══════════════════════════════════════ */
@@ -696,19 +789,25 @@ footer {
 /* ═══════════════════════════════════════ */
 @media (min-width: 769px) {
     nav {
-        padding: 0.95rem 5%;
+        padding: 0.9rem 5%;
     }
 
-    .logo {
-        font-size: 1.35rem;
+    .logo-placeholder {
+        width: 34px;
+        height: 34px;
+        font-size: 0.55rem;
+    }
+
+    .logo-text {
+        font-size: 1.3rem;
     }
 
     .nav-links {
-        gap: 1.8rem;
+        gap: 1.6rem;
     }
 
     .nav-links a {
-        font-size: 0.9rem;
+        font-size: 0.88rem;
     }
 
     .hero {
@@ -716,20 +815,20 @@ footer {
     }
 
     .hero h1 {
-        font-size: 3.6rem;
+        font-size: 3.4rem;
     }
 
     .hero-tag {
-        font-size: 0.82rem;
+        font-size: 0.8rem;
         letter-spacing: 3.5px;
     }
 
     .section {
-        padding: 4.5rem 2rem;
+        padding: 4rem 2rem;
     }
 
     .why-inner {
-        padding: 4.5rem 2rem;
+        padding: 4rem 2rem;
     }
 
     .section > p {
@@ -738,28 +837,28 @@ footer {
 
     .cards-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1.3rem;
+        gap: 1.2rem;
     }
 
     .card {
-        padding: 1.8rem 1.4rem;
+        padding: 1.7rem 1.3rem;
     }
 
     .card-icon {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
     .card h3 {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
     }
 
     .card p {
-        font-size: 0.9rem;
+        font-size: 0.88rem;
     }
 
     .why-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.3rem;
+        gap: 1.2rem;
     }
 
     .gallery-grid {
@@ -774,33 +873,25 @@ footer {
         grid-column: span 2;
     }
 
-    .cta-banner {
-        padding: 4rem 2rem;
-    }
-
-    .cta-banner h2 {
-        font-size: 2.3rem;
-    }
-
     .contact-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1.2rem;
+        gap: 1.1rem;
     }
 
     .contact-card {
-        padding: 1.8rem 1.2rem;
+        padding: 1.7rem 1.1rem;
     }
 
     .stats-bar {
-        padding: 2.2rem 2rem;
+        padding: 2rem 2rem;
     }
 
     .stat-number {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
     .stat-label {
-        font-size: 0.82rem;
+        font-size: 0.8rem;
     }
 
     .whatsapp-float {
@@ -808,6 +899,10 @@ footer {
         height: 54px;
         bottom: 22px;
         right: 22px;
+    }
+
+    .modal-content {
+        padding: 2.2rem;
     }
 }
 
@@ -819,12 +914,18 @@ footer {
         padding: 1rem 6%;
     }
 
-    .logo {
-        font-size: 1.5rem;
+    .logo-placeholder {
+        width: 38px;
+        height: 38px;
+        font-size: 0.6rem;
+    }
+
+    .logo-text {
+        font-size: 1.45rem;
     }
 
     .nav-links {
-        gap: 2.2rem;
+        gap: 2rem;
     }
 
     .nav-links a {
@@ -833,21 +934,19 @@ footer {
 
     .hero {
         padding: 8rem 2rem 5rem;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.45)),
-            url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=2000&q=90");
     }
 
     .hero-content {
-        max-width: 680px;
+        max-width: 660px;
     }
 
     .hero h1 {
-        font-size: 4.2rem;
+        font-size: 4rem;
     }
 
     .hero p {
-        font-size: 1.1rem;
-        max-width: 520px;
+        font-size: 1.05rem;
+        max-width: 500px;
     }
 
     .btn {
@@ -856,39 +955,39 @@ footer {
     }
 
     .section {
-        padding: 5.5rem 2rem;
+        padding: 5rem 2rem;
     }
 
     .why-inner {
-        padding: 5.5rem 2rem;
+        padding: 5rem 2rem;
     }
 
     h2 {
-        font-size: 2.6rem;
-        margin-bottom: 0.6rem;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .cards-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
+        gap: 1.4rem;
     }
 
     .card {
-        padding: 2rem 1.5rem;
+        padding: 1.9rem 1.4rem;
     }
 
     .why-grid {
         grid-template-columns: repeat(4, 1fr);
-        gap: 1.2rem;
+        gap: 1.1rem;
     }
 
     .why-card {
-        padding: 1.8rem 1.3rem;
+        padding: 1.7rem 1.2rem;
     }
 
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        gap: 0.9rem;
     }
 
     .gallery-item:nth-child(1) {
@@ -900,32 +999,24 @@ footer {
         grid-column: span 1;
     }
 
-    .cta-banner {
-        padding: 5rem 2rem;
-    }
-
-    .cta-banner h2 {
-        font-size: 2.6rem;
-    }
-
     .contact-grid {
-        gap: 1.4rem;
+        gap: 1.3rem;
     }
 
     .contact-card {
-        padding: 2rem 1.4rem;
+        padding: 1.9rem 1.3rem;
     }
 
     .stats-bar {
-        padding: 2.5rem 2rem;
+        padding: 2.2rem 2rem;
     }
 
     .stat-number {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
     }
 
     .footer-brand {
-        font-size: 1.5rem;
+        font-size: 1.45rem;
     }
 
     .whatsapp-float {
@@ -945,8 +1036,8 @@ footer {
     }
 
     nav {
-        padding-left: max(4%, env(safe-area-inset-left));
-        padding-right: max(4%, env(safe-area-inset-right));
+        padding-left: max(3%, env(safe-area-inset-left));
+        padding-right: max(3%, env(safe-area-inset-right));
     }
 
     body {
