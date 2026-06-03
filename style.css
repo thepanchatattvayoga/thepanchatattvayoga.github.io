@@ -1,196 +1,209 @@
-/* === LUXURY YOGA BRAND CSS === */
-/* Elegant Cream & Gold Version */
+/* === THE PANCHA TATTVA YOGA === */
+/* Mobile-First | iOS + Android + Desktop Optimized */
+/* Version: Elegant Cream & Gold */
 
-* {
+/* ─── RESET & BASE ─── */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overscroll-behavior-y: none;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: #FCF9F5;
     color: #2C2418;
-    line-height: 1.7;
+    line-height: 1.65;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
+/* ─── TYPOGRAPHY ─── */
 h1, h2, h3, .logo {
     font-family: 'Cormorant Garamond', serif;
-}
-
-h1 {
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-weight: 500;
 }
 
 h2 {
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
-    font-weight: 500;
+    font-size: 1.9rem;
     letter-spacing: -0.01em;
     color: #2C2418;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.8rem;
     text-align: center;
 }
 
 h3 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
 p {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     color: #5A4A3A;
+    text-align: center;
 }
 
-/* Navigation - Glassmorphism Premium */
+/* ─── NAVIGATION ─── */
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(252, 249, 245, 0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(252, 249, 245, 0.94);
+    backdrop-filter: blur(14px) saturate(1.2);
+    -webkit-backdrop-filter: blur(14px) saturate(1.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 6%;
+    padding: 0.85rem 5%;
     z-index: 1000;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(176, 137, 104, 0.15);
+    border-bottom: 1px solid rgba(176, 137, 104, 0.12);
 }
 
 .logo {
-    font-size: 1.6rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #B08968;
-    letter-spacing: 1px;
-    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.5px;
+    text-decoration: none;
 }
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.2rem;
     align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #2C2418;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 500;
     font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
+    letter-spacing: 0.3px;
+    padding: 0.4rem 0;
     position: relative;
+    transition: color 0.25s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:active {
     color: #B08968;
 }
 
 .nav-links a::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
     width: 0%;
-    height: 2px;
+    height: 1.5px;
     background: #B08968;
-    transition: width 0.3s ease;
+    transition: width 0.25s ease;
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
 
-/* Hero Section - Grand & Luxurious */
+/* ─── HERO ─── */
 .hero {
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.45)),
-        url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=2000&q=90");
+    min-height: 100dvh;
+    min-height: 100vh; /* fallback */
+    background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.48)),
+        url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=1200&q=85");
     background-size: cover;
-    background-position: center 30%;
+    background-position: center 35%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 120px 1.5rem 80px;
+    padding: 6rem 1.2rem 3rem;
     position: relative;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 520px;
     margin: 0 auto;
-    animation: fadeUp 1s ease-out;
+    animation: fadeUp 0.8s ease-out;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.hero h1 {
-    color: white;
-    font-size: clamp(2.8rem, 7vw, 5.5rem);
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 2px 15px rgba(0,0,0,0.2);
-    text-align: center;
-}
-
 .hero-tag {
-    color: rgba(255,255,255,0.9);
-    font-size: clamp(0.85rem, 2vw, 1.2rem);
+    color: rgba(255,255,255,0.85);
+    font-size: 0.75rem;
     font-family: 'Inter', sans-serif;
     letter-spacing: 3px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
     text-transform: uppercase;
-    font-weight: 300;
-    text-align: center;
+    font-weight: 400;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    line-height: 1.15;
 }
 
 .hero p {
-    color: rgba(255,255,255,0.95);
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    text-align: center;
+    color: rgba(255,255,255,0.92);
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+    max-width: 90%;
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
-/* Buttons - Premium Gold/Cream */
+/* ─── BUTTONS ─── */
 .btn {
-    display: inline-block;
-    padding: 1rem 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.8rem;
     background: #B08968;
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    transition: all 0.4s ease;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
     border: 1.5px solid transparent;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+}
+
+.btn:active {
+    transform: scale(0.97);
 }
 
 .btn:hover {
     background: #9A7659;
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px -10px rgba(176, 137, 104, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px -6px rgba(176, 137, 104, 0.35);
 }
 
 .btn-outline {
     background: transparent;
-    border: 1.5px solid white;
+    border-color: rgba(255,255,255,0.7);
     color: white;
 }
 
@@ -202,17 +215,21 @@ nav {
 
 .hero-buttons {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
     align-items: center;
 }
 
-/* Sections Layout */
+.hero-buttons .btn {
+    width: min(260px, 88%);
+}
+
+/* ─── SECTIONS ─── */
 .section {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 6rem 2rem;
+    padding: 3.5rem 1.2rem;
     text-align: center;
 }
 
@@ -221,19 +238,18 @@ nav {
 }
 
 .section > p {
-    max-width: 700px;
-    margin: 0 auto 1.2rem;
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.75;
 }
 
-/* Cards - Premium & Spacious */
+/* ─── CARDS ─── */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -241,57 +257,66 @@ nav {
 
 .card {
     background: white;
-    padding: 2.5rem 2rem;
-    border-radius: 24px;
+    padding: 1.6rem 1.2rem;
+    border-radius: 18px;
     text-align: center;
-    transition: all 0.4s ease;
-    border: 1px solid rgba(176, 137, 104, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.35s ease;
+    border: 1px solid rgba(176, 137, 104, 0.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.card:active {
+    transform: scale(0.98);
+}
+
 .card:hover {
-    transform: translateY(-10px);
-    border-color: #B08968;
-    box-shadow: 0 25px 40px -15px rgba(176, 137, 104, 0.2);
+    transform: translateY(-6px);
+    border-color: rgba(176, 137, 104, 0.25);
+    box-shadow: 0 18px 34px -10px rgba(176, 137, 104, 0.15);
 }
 
 .card-icon {
-    font-size: 2.2rem;
-    margin-bottom: 1.2rem;
+    font-size: 1.9rem;
+    margin-bottom: 0.8rem;
+    line-height: 1;
 }
 
 .card h3 {
     color: #2C2418;
+    font-size: 1.2rem;
 }
 
 .card p {
     color: #5A4A3A;
-    font-size: 0.95rem;
-    line-height: 1.7;
+    font-size: 0.88rem;
+    line-height: 1.65;
 }
 
-/* CTA Banner */
+/* ─── CTA BANNER ─── */
 .cta-banner {
     background: linear-gradient(135deg, #B08968 0%, #9A7659 100%);
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 3rem 1.2rem;
+}
+
+.cta-inner {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .cta-banner h2 {
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.7rem;
 }
 
 .cta-banner p {
-    color: rgba(255,255,255,0.9);
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 1.4rem;
+    font-size: 0.95rem;
 }
 
 .btn-light {
@@ -304,103 +329,107 @@ nav {
     color: #9A7659;
 }
 
-/* Contact Section */
+/* ─── CONTACT ─── */
 .contact-section {
     background: #F5EFE6;
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     max-width: 900px;
-    margin: 3rem auto 0;
+    margin: 1.8rem auto 0;
 }
 
 .contact-card {
     background: white;
-    padding: 2.5rem 2rem;
-    border-radius: 20px;
+    padding: 1.5rem 1.2rem;
+    border-radius: 16px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(176, 137, 104, 0.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(176, 137, 104, 0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
+    min-height: 44px;
+}
+
+.contact-card:active {
+    transform: scale(0.98);
 }
 
 .contact-card:hover {
-    transform: translateY(-8px);
-    border-color: #b08968;
-    box-shadow: 0 20px 40px rgba(176, 137, 104, 0.15);
+    transform: translateY(-5px);
+    border-color: rgba(176, 137, 104, 0.25);
+    box-shadow: 0 16px 32px -8px rgba(176, 137, 104, 0.12);
 }
 
 .contact-icon {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+    line-height: 1;
 }
 
 .contact-card h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #2C2418;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.3rem;
 }
 
-.contact-card a {
-    text-decoration: none;
-    color: #b08968;
-    font-size: 0.95rem;
+.contact-card span {
+    color: #B08968;
+    font-size: 0.88rem;
     font-weight: 500;
-    transition: color 0.3s ease;
     word-break: break-word;
 }
 
-.contact-card a:hover {
-    color: #9A7659;
-    text-decoration: underline;
-}
-
-/* Footer */
+/* ─── FOOTER ─── */
 footer {
     background-color: #2C2418;
-    color: #D1C7BC;
+    color: #B8A99A;
     text-align: center;
-    padding: 2.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 1.8rem 1rem;
+    font-size: 0.8rem;
 }
 
-/* WhatsApp Float Button */
+/* ─── WHATSAPP FLOAT ─── */
 .whatsapp-float {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 18px;
+    right: 18px;
     background-color: #25D366;
     color: white;
-    width: 60px;
-    height: 60px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    text-decoration: none;
-    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
     transition: all 0.3s ease;
     z-index: 99;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.whatsapp-float:active {
+    transform: scale(0.92);
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
     background-color: #20b859;
 }
 
-/* Animations */
+/* ─── ANIMATIONS ─── */
 @keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(24px);
     }
     to {
         opacity: 1;
@@ -408,71 +437,235 @@ footer {
     }
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* ═══════════════════════════════════════ */
+/* ═══ TABLET (481px - 768px) ═══════════ */
+/* ═══════════════════════════════════════ */
+@media (min-width: 481px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-buttons .btn {
+        width: auto;
+    }
+}
+
+/* ═══════════════════════════════════════ */
+/* ═══ SMALL LAPTOP (769px - 1024px) ════ */
+/* ═══════════════════════════════════════ */
+@media (min-width: 769px) {
     nav {
         padding: 1rem 5%;
     }
-    
+
     .logo {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
-    
+
     .nav-links {
-        gap: 1.2rem;
+        gap: 2rem;
     }
-    
+
     .nav-links a {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
-    
+
     .hero {
-        padding: 100px 1.2rem 60px;
+        padding: 7rem 2rem 4rem;
     }
-    
-    .btn-outline {
-        margin-left: 0;
+
+    .hero h1 {
+        font-size: 3.8rem;
     }
-    
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
+
+    .hero-tag {
+        font-size: 0.85rem;
+        letter-spacing: 3.5px;
     }
-    
-    .hero-buttons .btn {
-        width: min(280px, 90%);
-    }
-    
+
     .section {
-        padding: 4rem 1.5rem;
+        padding: 5rem 2rem;
     }
-    
+
+    .section > p {
+        font-size: 1.05rem;
+    }
+
     .cards-grid {
-        gap: 1.2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
-    
+
     .card {
         padding: 2rem 1.5rem;
     }
-    
+
+    .card-icon {
+        font-size: 2.1rem;
+    }
+
+    .card h3 {
+        font-size: 1.35rem;
+    }
+
+    .card p {
+        font-size: 0.92rem;
+    }
+
+    .cta-banner {
+        padding: 4rem 2rem;
+    }
+
+    .cta-banner h2 {
+        font-size: 2.4rem;
+    }
+
     .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.2rem;
     }
-    
+
     .contact-card {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.2rem;
     }
-    
-    .cta-banner {
-        padding: 4rem 1.5rem;
-    }
-    
+
     .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        font-size: 1.6rem;
-        bottom: 20px;
-        right: 20px;
+        width: 56px;
+        height: 56px;
+        bottom: 24px;
+        right: 24px;
+    }
+}
+
+/* ═══════════════════════════════════════ */
+/* ═══ DESKTOP (1025px+) ════════════════ */
+/* ═══════════════════════════════════════ */
+@media (min-width: 1025px) {
+    nav {
+        padding: 1.1rem 6%;
+    }
+
+    .logo {
+        font-size: 1.55rem;
+    }
+
+    .hero {
+        padding: 8rem 2rem 5rem;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.45)),
+            url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=2000&q=90");
+    }
+
+    .hero-content {
+        max-width: 720px;
+    }
+
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+
+    .hero p {
+        font-size: 1.15rem;
+        max-width: 560px;
+    }
+
+    .btn {
+        padding: 0.95rem 2.2rem;
+        font-size: 0.95rem;
+    }
+
+    .section {
+        padding: 6rem 2rem;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 2.2rem 1.6rem;
+    }
+
+    .cta-banner {
+        padding: 5rem 2rem;
+    }
+
+    .cta-banner h2 {
+        font-size: 2.8rem;
+    }
+
+    .contact-grid {
+        gap: 1.5rem;
+    }
+
+    .contact-card {
+        padding: 2.2rem 1.5rem;
+    }
+
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        bottom: 28px;
+        right: 28px;
+    }
+}
+
+/* ═══════════════════════════════════════ */
+/* ═══ iOS SAFARI SPECIFIC FIXES ════════ */
+/* ═══════════════════════════════════════ */
+@supports (-webkit-touch-callout: none) {
+    .hero {
+        min-height: -webkit-fill-available;
+    }
+
+    nav {
+        padding-left: max(5%, env(safe-area-inset-left));
+        padding-right: max(5%, env(safe-area-inset-right));
+    }
+
+    body {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* ═══════════════════════════════════════ */
+/* ═══ REDUCED MOTION ═══════════════════ */
+/* ═══════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
