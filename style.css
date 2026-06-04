@@ -1071,9 +1071,8 @@ footer {
 
 
 
-
 /* ═══════════════════════════════════════ */
-/* ═══ GALLERY FIXES v2 — Better Looking ═ */
+/* ═══ GALLERY FIXES v3 — Portrait Poses ═ */
 /* ═══════════════════════════════════════ */
 
 /* Override old gallery styles */
@@ -1093,19 +1092,24 @@ footer {
     justify-content: center;
 }
 
-/* Default: fill the frame */
+/* Default: fill the frame, center crop */
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center;
     display: block;
     transition: transform 0.4s ease;
 }
 
-/* yoga4 & yoga5: cover but position from top so heads aren't cut */
+/* yoga4 & yoga5: TALL poses need TALL frames */
+.gallery-contain {
+    aspect-ratio: 3 / 4 !important; /* Portrait orientation for headstands */
+}
+
 .gallery-contain img {
     object-fit: cover !important;
-    object-position: top center;
+    object-position: center 30%; /* Slightly above center to capture the pose */
     padding: 0;
     background: none;
 }
@@ -1115,7 +1119,7 @@ footer {
     transform: scale(1.03);
 }
 
-/* Tablet: 2 columns, first image spans 2 rows */
+/* Tablet: 2 columns */
 @media (min-width: 481px) {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1124,9 +1128,13 @@ footer {
         grid-row: span 2;
         aspect-ratio: auto;
     }
+    /* Portrait items span full width on tablet for better display */
+    .gallery-contain {
+        grid-column: span 1;
+    }
 }
 
-/* Desktop: 3 columns masonry */
+/* Desktop: 3 columns */
 @media (min-width: 769px) {
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1135,5 +1143,9 @@ footer {
     .gallery-featured {
         grid-row: span 2;
         aspect-ratio: auto;
+    }
+    /* Portrait items on desktop */
+    .gallery-contain {
+        aspect-ratio: 3 / 4 !important;
     }
 }
