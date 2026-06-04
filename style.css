@@ -1149,3 +1149,11 @@ footer {
         aspect-ratio: 3 / 4 !important;
     }
 }
+
+
+
+
+/* yoga1 featured: keep landscape, don't stretch tall */
+.gallery-featured {
+    aspect-ratio: 4 / 3 !important;
+}
